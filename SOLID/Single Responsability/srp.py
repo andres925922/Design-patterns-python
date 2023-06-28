@@ -1,3 +1,16 @@
+"""
+Sumary
+
+A class should have it primary responsability whatever its meant to be doing and it should not take any aditional responsabilities
+
+You do not want to overload your objects with too many responsabilities
+
+Antipattern -> God object -> Massive class
+
+"A class should have a single reason to change and that change should be somehow related to its primary responsability.
+
+"""
+
 class Journal():
 
     def __init__(self) -> None:

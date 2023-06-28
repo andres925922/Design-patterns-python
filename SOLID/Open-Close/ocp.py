@@ -1,3 +1,15 @@
+"""
+
+Sumary
+
+Open for extension and closed for modifications
+
+After you've written and tested a paticular class or feature, you should not modify it. Instead, you should extend it.
+
+For this particular case, Specifications can be used.
+
+"""
+
 from enum import Enum
 
 class Color(Enum):
@@ -28,8 +40,7 @@ class BadFilter():
 
     def filter_by_color(self, 
                         color, 
-                        products: list[Product]
-    ) -> Product | None:
+                        products: list[Product]) -> Product | None:
         """ Function to check whether the producto color matchs with the color we are filtering"""
         for i in products:
             if i.color == color:
@@ -37,8 +48,7 @@ class BadFilter():
 
     def filter_by_size(self, 
                        size, 
-                       products: list[Product]
-    ) -> Product | None:
+                       products: list[Product]) -> Product | None:
         for p in products:
             if p.size == size:
                 yield p
@@ -46,8 +56,7 @@ class BadFilter():
     def filter_by_color_and_size(self, 
                                  color,
                                  size,
-                                 products: list[Product]
-    ) -> Product | None:
+                                 products: list[Product]) -> Product | None:
         for p in products:
             if p.color == color and p.size == size:
                 yield p
@@ -124,11 +133,11 @@ using OCP
     )
     bf = BetterFilter()
     green = ColorSpecification(Color.GREEN)
-    for i in bf.filter(product_cataloge, green):
+    for i in list(bf.filter(product_cataloge, green)):
         print(f"{i} is green")
 
     large = SizeSpecification(Size.LARGE)
-    for i in bf.filter(product_cataloge, large):
+    for i in list(bf.filter(product_cataloge, large)):
         print(f"{i} is large")
 
     # TODO
