@@ -1,6 +1,8 @@
 """
 Sumary
 
+Also called separation of concerns.
+
 A class should have it primary responsability whatever its meant to be doing and it should not take any aditional responsabilities
 
 You do not want to overload your objects with too many responsabilities
