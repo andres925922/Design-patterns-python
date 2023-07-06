@@ -1,3 +1,16 @@
+# Copyright (c) 2023 Andres Convertini
+#
+# -*- coding:utf-8 -*-
+# @Script: 1-Functional_decorators.py
+# @Author: Andres Convertini
+# @Email: andres.convertini91@gmail.com
+# @Create At: 2023-07-06 06:37:16
+# @Last Modified By: Andres Convertini
+# @Last Modified At: 2023-07-06 06:37:16
+# @Description: This is description.
+
+
+
 import time
 
 def time_it(func):

@@ -1,3 +1,14 @@
+# Copyright (c) 2023 Andres Convertini
+#
+# -*- coding:utf-8 -*-
+# @Script: 2-Classic_decorators.py
+# @Author: Andres Convertini
+# @Email: andres.convertini91@gmail.com
+# @Create At: 2023-07-06 06:37:44
+# @Last Modified By: Andres Convertini
+# @Last Modified At: 2023-07-06 06:38:18
+# @Description: This is description.
+
 class Shape:
 
     def __str__(self) -> str:
