@@ -22,14 +22,14 @@ class TokenMachine:
     def __init__(self):
         self.tokens = []
 
-    def add_token_value(self, value):
+    def add_token_value(self, value: int):
         return self.add_token(Token(value))
 
-    def add_token(self, token):
+    def add_token(self, token: Token):
         self.tokens.append(token)
         return Memento(deepcopy(self.tokens))                           # Basicamente generamos una copia perfecta de la lista de tokens.
 
-    def revert(self, memento):
+    def revert(self, memento: Memento):
         self.tokens = [Token(x.value) for x in memento]                 # Genera una lista a partir de la lista que pasamos en memento
 
 
